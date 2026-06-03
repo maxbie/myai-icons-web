@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>myAI DEV — Icon Test</title>
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="myAI DEV">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#ffffff">
+  <style>
+    :root { --bg:#f4f5f7; --fg:#11131a; --muted:#5b6170; --card:#fff; --line:#e3e6ec; --env:#0a2a6b; }
+    @media (prefers-color-scheme: dark){ :root{ --bg:#0d0f14; --fg:#eef0f5; --muted:#9aa1b1; --card:#161922; --line:#272c38; --env:#5b8bff; } }
+    *{ box-sizing:border-box; }
+    body{ margin:0; background:var(--bg); color:var(--fg); font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+      padding:24px 18px calc(48px + env(safe-area-inset-bottom)); -webkit-font-smoothing:antialiased; }
+    h1{ font-size:22px; margin:0 0 4px; } h2{ font-size:15px; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); margin:32px 0 12px; }
+    p{ color:var(--muted); margin:6px 0; } .wrap{ max-width:720px; margin:0 auto; }
+    a{ color:var(--env); }
+    .card{ background:var(--card); border:1px solid var(--line); border-radius:16px; padding:18px; margin-top:12px; }
+    .row{ display:flex; flex-wrap:wrap; gap:22px; align-items:flex-end; }
+    .icon-block{ text-align:center; } .icon-block img{ display:block; image-rendering:-webkit-optimize-contrast; }
+    .icon-block span{ display:block; margin-top:8px; font-size:12px; color:var(--muted); }
+    .s16{width:16px;height:16px;} .s32{width:32px;height:32px;} .s48{width:48px;height:48px;} .s64{width:64px;height:64px;} .s128{width:128px;height:128px;}
+    .bg-strip{ display:flex; border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+    .bg-strip>div{ flex:1; padding:20px; display:flex; justify-content:center; }
+    .bg-white{background:#fff;} .bg-dark{background:#0b0b0d;} .bg-brand{background:#0a2a6b;}
+    .mask-row{ display:flex; gap:22px; flex-wrap:wrap; }
+    .mask{ width:96px; height:96px; overflow:hidden; } .mask img{ width:100%; height:100%; display:block; }
+    .circle{ border-radius:50%; } .squircle{ border-radius:24px; }
+    ol{ padding-left:20px; } li{ margin:6px 0; color:var(--fg); }
+    .tag{ display:inline-block; font-size:12px; font-weight:700; padding:3px 10px; border-radius:99px; background:var(--env); color:#fff; margin-left:8px; vertical-align:middle; }
+    strong{ color:var(--fg); } .home{ display:inline-block; margin-bottom:10px; font-size:13px; }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <a class="home" href="../">← alle Umgebungen</a>
+  <h1>myAI DEV — Icon Test <span class="tag">DEV</span></h1>
+  <p>Auf dem iPhone in <strong>Safari</strong> über eine http(s)-URL öffnen, dann unten testen.</p>
+
+  <h2>1 · Favicon — Tab</h2>
+  <div class="card">
+    <div class="row">
+      <div class="icon-block"><img class="s16" src="icons/favicon-16.png" alt=""><span>16 px</span></div>
+      <div class="icon-block"><img class="s32" src="icons/favicon-32.png" alt=""><span>32 px</span></div>
+      <div class="icon-block"><img class="s48" src="icons/favicon-48.png" alt=""><span>48 px (.ico)</span></div>
+    </div>
+  </div>
+
+  <h2>2 · App-Icon auf Hintergründen (Light / Dark / Brand)</h2>
+  <div class="bg-strip">
+    <div class="bg-white"><img class="s64" src="icons/icon-192.png" alt=""></div>
+    <div class="bg-dark"><img class="s64" src="icons/icon-192.png" alt=""></div>
+    <div class="bg-brand"><img class="s64" src="icons/icon-192.png" alt=""></div>
+  </div>
+
+  <h2>3 · iOS-Homescreen — apple-touch-icon</h2>
+  <div class="card">
+    <div class="row">
+      <div class="icon-block"><img class="s128" style="border-radius:28px" src="icons/apple-touch-icon.png" alt=""><span>180 px · iOS rundet</span></div>
+    </div>
+    <p style="margin-top:14px">Beim „Zum Home-Bildschirm" landet dieses Icon auf dem iPhone, Label <em>myAI DEV</em>.</p>
+  </div>
+
+  <h2>4 · Android-Homescreen — maskable</h2>
+  <div class="card mask-row">
+    <div class="icon-block"><div class="mask circle"><img src="icons/icon-512-maskable.png" alt=""></div><span>Kreis</span></div>
+    <div class="icon-block"><div class="mask squircle"><img src="icons/icon-512-maskable.png" alt=""></div><span>Squircle</span></div>
+    <div class="icon-block"><div class="mask"><img src="icons/icon-512-maskable.png" alt=""></div><span>voll</span></div>
+  </div>
+
+  <h2>5 · Zum Home Screen hinzufügen</h2>
+  <div class="card">
+    <ol>
+      <li>In <strong>Safari</strong> öffnen.</li>
+      <li>Teilen <strong>↑</strong> → <strong>„Zum Home-Bildschirm"</strong>.</li>
+      <li>Icon &amp; Name <em>myAI DEV</em> prüfen → Hinzufügen.</li>
+    </ol>
+    <p style="margin-top:6px">Tipp: alte Verknüpfung vorher löschen, iOS cached das Icon.</p>
+  </div>
+</div>
+</body>
+</html>
